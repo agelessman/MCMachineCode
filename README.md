@@ -43,3 +43,27 @@ machineCodeVc.didGetMachineCode = { code in
 
 self.resultLabel.text = code
 }
+```
+
+Installation
+==============
+<!---->
+<!--### CocoaPods-->
+<!---->
+<!--1. Add `pod 'YYModel'` to your Podfile.-->
+<!--2. Run `pod install` or `pod update`.-->
+<!--3. Import \<YYModel/YYModel.h\>.-->
+<!---->
+
+### Manually
+
+1. Download all the files in the MCMachineCodeDemo subdirectory.
+2. Add the source files to your Xcode project.
+
+
+
+## Author
+
+M.C, chaoma0609@gmail.com
+
+## If you feel helpful, please point a Star~ thank you.. Please contact me with any questions.
