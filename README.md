@@ -12,3 +12,34 @@ MCMachineCode can allow you to quickly add `scan code` to your project, the use 
 [screenshot2]: https://raw.github.com/agelessman/MCMachineCode/master/Screenshots/Photo_0527_2a.jpg
 [screenshot3_thumb]: https://raw.github.com/agelessman/MCMachineCode/master/Screenshots/Photo_0527_3a(1).jpg
 [screenshot3]: https://raw.github.com/agelessman/MCMachineCode/master/Screenshots/Photo_0527_3a.jpg
+
+## Usage
+
+
+``` swift
+// type 0
+let machineCodeVc = MCMachineCodeViewController(lineType: LineType.LineScan, moveType: MoveType.Default)
+self.navigationController?.pushViewController(machineCodeVc, animated: true)
+
+machineCodeVc.didGetMachineCode = { code in
+
+self.resultLabel.text = code
+}
+
+// type 1
+let machineCodeVc = MCMachineCodeViewController(lineType: LineType.Grid, moveType: MoveType.Default)
+self.navigationController?.pushViewController(machineCodeVc, animated: true)
+
+machineCodeVc.didGetMachineCode = { code in
+
+self.resultLabel.text = code
+}
+
+// type 2
+let machineCodeVc = MCMachineCodeViewController(lineType: LineType.Default, moveType: MoveType.Default)
+self.navigationController?.pushViewController(machineCodeVc, animated: true)
+
+machineCodeVc.didGetMachineCode = { code in
+
+self.resultLabel.text = code
+}
