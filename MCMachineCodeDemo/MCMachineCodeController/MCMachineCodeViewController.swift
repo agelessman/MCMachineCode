@@ -12,7 +12,7 @@ import AVFoundation
 public class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate {
     
     
-     var didGetMachineCode: ((code: String) -> Void)?
+    public var didGetMachineCode: ((code: String) -> Void)?
     
     private var previewView: MCPreviewView!
     private var cameraManager: MCCameraManager!
@@ -30,7 +30,13 @@ public class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        
+        super.init(coder: aDecoder)
+    }
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        
+        super.init(nibName: nil, bundle: nil)
     }
     
     override public func viewWillAppear(animated: Bool) {
