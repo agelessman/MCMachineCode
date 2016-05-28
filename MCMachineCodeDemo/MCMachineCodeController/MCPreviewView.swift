@@ -16,7 +16,7 @@ protocol MCPreviewViewDelegate : NSObjectProtocol {
     
 }
 
-class MCPreviewView: UIView,MCCodeDetectionDelegate {
+public class MCPreviewView: UIView,MCCodeDetectionDelegate {
     
     var codeLayers: NSMutableDictionary!
     weak var delegate: MCPreviewViewDelegate?
@@ -58,7 +58,7 @@ class MCPreviewView: UIView,MCCodeDetectionDelegate {
        
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
         configurePreviewLayer()
@@ -66,7 +66,7 @@ class MCPreviewView: UIView,MCCodeDetectionDelegate {
     }
     
     // override return layer
-    override class func layerClass() -> AnyClass {
+    override public class func layerClass() -> AnyClass {
         
         return AVCaptureVideoPreviewLayer.self
     }

@@ -17,7 +17,7 @@ enum MCCameraErrorCode : Int {
     case FailedToAddOutput
 }
 
-class MCBaseCameraManager: NSObject {
+public class MCBaseCameraManager: NSObject {
     
     var captureSession: AVCaptureSession!
     weak var delegate: MCCameraManagerDelegate?

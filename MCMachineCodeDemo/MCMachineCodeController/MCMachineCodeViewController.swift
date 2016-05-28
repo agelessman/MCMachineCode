@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate {
+public class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate {
     
     
      var didGetMachineCode: ((code: String) -> Void)?
@@ -29,18 +29,18 @@ class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate {
         self.moveType = moveType
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
         
         setupNavWithIsHideNav(true)
     }
 
-    override func viewWillDisappear(animated: Bool) {
+    override public func viewWillDisappear(animated: Bool) {
         
         super.viewWillDisappear(animated)
         
@@ -50,7 +50,7 @@ class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate {
         self.previewView.overlayView.stopMoving()
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         
         super.viewDidLoad()
         

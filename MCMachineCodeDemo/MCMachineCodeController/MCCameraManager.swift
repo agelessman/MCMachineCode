@@ -15,7 +15,7 @@ protocol MCCodeDetectionDelegate: NSObjectProtocol {
     func didDetectCodes(codes: [AnyObject])
 }
 
-class MCCameraManager: MCBaseCameraManager,AVCaptureMetadataOutputObjectsDelegate {
+public class MCCameraManager: MCBaseCameraManager,AVCaptureMetadataOutputObjectsDelegate {
     
     var metadataOutput: AVCaptureMetadataOutput!
     weak var codeDelegate: MCCodeDetectionDelegate?
@@ -98,7 +98,7 @@ class MCCameraManager: MCBaseCameraManager,AVCaptureMetadataOutputObjectsDelegat
     }
     
     // metadata obj delegate
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+    public func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
         if let _ = self.codeDelegate {
             

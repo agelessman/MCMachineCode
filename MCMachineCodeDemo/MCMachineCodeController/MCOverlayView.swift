@@ -34,7 +34,7 @@ let screenw: CGFloat = UIScreen.mainScreen().bounds.size.width
 let screenh: CGFloat = UIScreen.mainScreen().bounds.size.height
 let moveSpeed: CGFloat = 1.0
 
-class MCOverlayView: UIView {
+public class MCOverlayView: UIView {
     
     var scanRect: CGRect {
         get {
@@ -70,7 +70,7 @@ class MCOverlayView: UIView {
         self.backgroundColor = UIColor.clearColor()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -265,7 +265,7 @@ class MCOverlayView: UIView {
     }
     
     //MARK: - override drawRect method
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
        
         let originx: CGFloat = (rect.size.width - w ) / 2
         let originy: CGFloat = rect.size.height / 3.5
