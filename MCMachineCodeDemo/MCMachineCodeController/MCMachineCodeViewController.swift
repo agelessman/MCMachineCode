@@ -78,6 +78,9 @@ public class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate
             
             print(self.cameraManager.setupSession().1?.localizedDescription)
         }
+        
+        let pan = UIPanGestureRecognizer()
+        self.view.addGestureRecognizer(pan)
     }
     
     
@@ -215,8 +218,6 @@ public class MCMachineCodeViewController: UIViewController,MCPreviewViewDelegate
         if let nav = self.navigationController {
             
             nav.navigationBar.hidden = hideNav
-            
-            self.navigationController?.interactivePopGestureRecognizer?.enabled = !hideNav
 
             UIApplication.sharedApplication().setStatusBarStyle(hideNav == true ? UIStatusBarStyle.LightContent : self.statusBarStyle, animated: false)
         }
